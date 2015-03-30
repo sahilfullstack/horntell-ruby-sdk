@@ -1,23 +1,23 @@
 require 'json'
 require 'rest_client'
 
-require "horntell/ruby/version"
-require 'horntell/ruby/errors/error.rb'
-require 'horntell/ruby/errors/network_error.rb'
-require 'horntell/ruby/errors/authentication_error.rb'
-require 'horntell/ruby/errors/forbidden_error.rb'
-require 'horntell/ruby/errors/invalid_request_error.rb'
-require 'horntell/ruby/errors/not_found_error.rb'
-require 'horntell/ruby/errors/service_error.rb'
+require_relative "../horntell/ruby/version.rb"
+require_relative '../horntell/ruby/errors/error.rb'
+require_relative '../horntell/ruby/errors/network_error.rb'
+require_relative '../horntell/ruby/errors/invalid_request_error.rb'
+require_relative '../horntell/ruby/errors/authentication_error.rb'
+require_relative '../horntell/ruby/errors/forbidden_error.rb'
+require_relative '../horntell/ruby/errors/not_found_error.rb'
+require_relative '../horntell/ruby/errors/service_error.rb'
 
-require 'horntell/ruby/http/response.rb'
-require 'horntell/ruby/http/api_requestor.rb'
-require 'horntell/ruby/http/http_client.rb'
+require_relative '../horntell/ruby/http/response.rb'
+require_relative '../horntell/ruby/http/http_client.rb'
+require_relative '../horntell/ruby/http/api_requestor.rb'
 
-require 'horntell/ruby/profile.rb'
-require 'horntell/ruby/horn.rb'
-require 'horntell/ruby/activity.rb'
-require 'horntell/ruby/campaign.rb'
+require_relative '../horntell/ruby/profile.rb'
+require_relative '../horntell/ruby/horn.rb'
+require_relative '../horntell/ruby/activity.rb'
+require_relative '../horntell/ruby/campaign.rb'
 
 module Horntell
 	module Ruby

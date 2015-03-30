@@ -8,7 +8,7 @@ module Horntell
 
 				def initialize(response=nil)
 					@response = response
-					@body = response.body
+					@body = get_code == 204 ? nil : JSON.parse(body)
 				end
 
 				def get_original
@@ -16,7 +16,7 @@ module Horntell
 				end
 
 				def get_body
-					return (get_code == 204 ? nil : JSON.parse(body))
+					return body
 				end
 
 				def get_code

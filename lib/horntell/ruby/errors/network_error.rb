@@ -1,6 +1,6 @@
 module Horntell
 	module Ruby
-		class NetworkError < HorntellError
+		class NetworkError < Error
 			attr_accessor :message
 			attr_accessor :type
 

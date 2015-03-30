@@ -6,7 +6,7 @@ module Horntell
 				def raw_request(method = nil, endpoint = nil, params = nil)
 
 					url = Horntell::Ruby.base_url+endpoint
-
+					
 					headers = {
 						'Accept'=> "application/vnd.horntell.#{Horntell::Ruby::version}+json",
 						'Content-Type' => 'application/json'
