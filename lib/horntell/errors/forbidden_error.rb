@@ -1,4 +1,6 @@
 module Horntell
-	class ForbiddenError < InvalidRequestError
+	module Errors
+		class ForbiddenError < InvalidRequestError
+		end
 	end
 end

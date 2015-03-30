@@ -45,5 +45,9 @@ module Horntell
 		def get_secret()
 			return @secret
 		end
+
+		def set_version(version=nil)
+			@version = version
+		end
 	end
 end

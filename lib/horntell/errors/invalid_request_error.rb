@@ -1,4 +1,6 @@
 module Horntell
-	class InvalidRequestError < Error
+	module Errors
+		class InvalidRequestError < Error
+		end
 	end
 end

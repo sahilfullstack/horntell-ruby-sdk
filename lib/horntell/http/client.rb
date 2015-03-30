@@ -21,10 +21,10 @@ module Horntell
 					if code = e.http_code and body = e.http_body
 						return handle_api_error(code, body)
 					else
-						raise Horntell::NetworkError.new
+						raise Horntell::Errors::NetworkError.new
 					end
 				rescue Exception => e
-					raise Horntell::NetworkError.new
+					raise Horntell::Errors::NetworkError.new
 				end
 			end
 
@@ -49,27 +49,27 @@ module Horntell
 			end
 
 			def authentication_error(error, code)
-				AuthenticationError.new(error["message"], code, error["type"])
+				Horntell::Errors::AuthenticationError.new(error["message"], code, error["type"])
 			end
 
 			def forbidden_error(error, code)
-				ForbiddenError.new(error["message"], code, error["type"])
+				Horntell::Errors::ForbiddenError.new(error["message"], code, error["type"])
 			end
 
 			def horntell_error(error, code)
-				HorntellError.new(error["message"], code, error["type"])
+				Horntell::Errors::HorntellError.new(error["message"], code, error["type"])
 			end
 
 			def invalid_request_error(error, code)
-				InvalidRequestError.new(error["message"], code, error["type"])
+				Horntell::Errors::InvalidRequestError.new(error["message"], code, error["type"])
 			end
 
 			def not_found_error(error, code)
-				NotFoundError.new(error["message"], code, error["type"])
+				Horntell::Errors::NotFoundError.new(error["message"], code, error["type"])
 			end
 
 			def service_error(error, code)
-				ServiceError.new(error["message"], code, error["type"])
+				Horntell::Errors::ServiceError.new(error["message"], code, error["type"])
 			end
 		end
 	end

@@ -1,4 +1,6 @@
 module Horntell
-	class AuthenticationError < Error
+	module Errors
+		class AuthenticationError < Error
+		end
 	end
 end
