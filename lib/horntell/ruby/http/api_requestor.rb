@@ -19,7 +19,7 @@ module Horntell
 						url,
 						headers=headers,
 						params=params,
-						userName=Horntell::Ruby.api_key,
+						username=Horntell::Ruby.api_key,
 						password=Horntell::Ruby.api_secret)
 					# return response.class
 					return Horntell::Ruby::Http::Response.new(response)
