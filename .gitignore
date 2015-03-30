@@ -13,3 +13,4 @@
 *.a
 mkmf.log
 .sketches
+/horntell-*.gem
