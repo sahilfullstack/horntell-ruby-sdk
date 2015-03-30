@@ -1,6 +1,6 @@
 module Horntell
 	module Http
-		module HttpClient
+		module Client
 			def request(method, url, headers=nil, params=nil, username, password)
 				begin
 					opts = {

@@ -11,8 +11,8 @@ require_relative 'horntell/errors/not_found_error.rb'
 require_relative 'horntell/errors/service_error.rb'
 
 require_relative 'horntell/http/response.rb'
-require_relative 'horntell/http/http_client.rb'
-require_relative 'horntell/http/api_requestor.rb'
+require_relative 'horntell/http/client.rb'
+require_relative 'horntell/http/request.rb'
 
 require_relative 'horntell/profile.rb'
 require_relative 'horntell/horn.rb'
@@ -20,31 +20,31 @@ require_relative 'horntell/activity.rb'
 require_relative 'horntell/campaign.rb'
 
 module Horntell
-	@base_url = 'https://api.horntell.com'
+	@base = 'https://api.horntell.com'
 	@version = 'v1'
 
 	class << self
-		attr_accessor :api_key, :api_secret, :base_url, :version
+		attr_accessor :key, :secret, :base, :version
 
 		def init(key =  nil, secret = nil)
-			@api_key = key
-			@api_secret = secret
+			@key = key
+			@secret = secret
 		end
 
 		def set_base(base=nil)
-			@base_url = base
+			@base = base
 		end
 
 		def get_base()
-			return @base_url
+			return @base
 		end
 
 		def get_key()
-			return @api_key
+			return @key
 		end
 
 		def get_secret()
-			return @api_secret
+			return @secret
 		end
 	end
 end

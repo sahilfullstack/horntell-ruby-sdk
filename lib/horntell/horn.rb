@@ -1,6 +1,6 @@
 module Horntell
 	class Horn
-		extend Horntell::Http::ApiRequester
+		extend Horntell::Http::Request
 
 		# sends a horn to a profile
 		def self.to_profile(uid, horn)

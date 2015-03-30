@@ -1,6 +1,6 @@
 module Horntell
 	class Campaign
-		extend Horntell::Http::ApiRequester
+		extend Horntell::Http::Request
 
 		# triggers campaign for single profile
 		def self.to_profile(uid, campaignId)

@@ -1,10 +1,10 @@
 module Horntell
 	module Http
-		module ApiRequester
-			include Horntell::Http::HttpClient
+		module Request
+			include Horntell::Http::Client
 			def raw_request(method = nil, endpoint = nil, params = nil)
 
-				url = Horntell.base_url+endpoint
+				url = Horntell.base+endpoint
 				
 				headers = {
 					'Accept'=> "application/vnd.horntell.#{Horntell::version}+json",

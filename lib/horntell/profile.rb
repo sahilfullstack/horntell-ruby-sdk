@@ -1,6 +1,6 @@
 module Horntell
 	class Profile
-		extend Horntell::Http::ApiRequester
+		extend Horntell::Http::Request
 
 		#  find profile by its uid
 		def self.find(uid)
