@@ -48,7 +48,7 @@ module Horntell
 					when 500
 						raise service_error error, code
 					else
-						raise horntell_error
+						raise error
 					end
 				end
 

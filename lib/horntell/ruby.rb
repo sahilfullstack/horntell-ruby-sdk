@@ -11,9 +11,9 @@ require 'horntell/ruby/errors/invalid_request_error.rb'
 require 'horntell/ruby/errors/not_found_error.rb'
 require 'horntell/ruby/errors/service_error.rb'
 
-require 'horntell/ruby/http/resource.rb'
-require 'horntell/ruby/http/http_client.rb'
+require 'horntell/ruby/http/response.rb'
 require 'horntell/ruby/http/api_requestor.rb'
+require 'horntell/ruby/http/http_client.rb'
 
 require 'horntell/ruby/profile.rb'
 require 'horntell/ruby/horn.rb'
