@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Horntell::Ruby::VERSION
   spec.authors       = ["Mohit Mamoria"]
   spec.email         = ["mohit.mamoria@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "Horntell SDK for Ruby"
+  spec.description   = ""
+  spec.homepage      = "http://horntell.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
