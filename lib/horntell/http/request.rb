@@ -18,8 +18,8 @@ module Horntell
 					url,
 					headers=headers,
 					params=params,
-					username=Horntell.api_key,
-					password=Horntell.api_secret)
+					username=Horntell.key,
+					password=Horntell.secret)
 				# return response.class
 				return Horntell::Http::Response.new(response)
 			end

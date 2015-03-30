@@ -27,11 +27,12 @@ module Horntell
 					raise Horntell::NetworkError.new
 				end
 			end
-		def handle_api_error(code, body)
-			error_obj = JSON.parse(body)
-			error = error_obj["error"]
 
-			case code
+			def handle_api_error(code, body)
+				error_obj = JSON.parse(body)
+				error = error_obj["error"]
+
+				case code
 				when 400
 					raise invalid_request_error error, code
 				when 401

@@ -16,7 +16,6 @@ require_relative 'horntell/http/request.rb'
 
 require_relative 'horntell/profile.rb'
 require_relative 'horntell/horn.rb'
-require_relative 'horntell/activity.rb'
 require_relative 'horntell/campaign.rb'
 
 module Horntell
