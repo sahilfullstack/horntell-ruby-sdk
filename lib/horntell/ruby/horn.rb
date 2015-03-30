@@ -1,15 +1,17 @@
-module SahilHorntell
-    class Horn
-        extend SahilHorntell::Http::ApiRequester
+module Horntell
+	module Ruby
+		class Horn
+			extend Horntell::Ruby::Http::ApiRequester
 
-        def self.to_profile(uid, horn)
-            return raw_request('post', "/profiles/#{uid}/horns", horn)
-        end
+			def self.to_profile(uid, horn)
+				return raw_request('post', "/profiles/#{uid}/horns", horn)
+			end
 
-        def self.to_profiles(profiles, horn)
-        	horn[:profile_uids] = profiles
+			def self.to_profiles(profiles, horn)
+				horn[:profile_uids] = profiles
 
-            return raw_request('post', "/profiles/horns", horn)
-        end
-    end
+				return raw_request('post', "/profiles/horns", horn)
+			end
+		end
+	end
 end
