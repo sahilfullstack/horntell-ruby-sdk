@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'horntell/ruby/version'
+require 'horntell/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "horntell-ruby"
-  spec.version       = Horntell::Ruby::VERSION
+  spec.name          = "horntell"
+  spec.version       = Horntell::VERSION
   spec.authors       = ["Mohit Mamoria"]
-  spec.email         = ["mohit.mamoria@gmail.com"]
+  spec.email         = ["mohit@horntell.com"]
   spec.summary       = "Horntell SDK for Ruby"
   spec.description   = ""
   spec.homepage      = "http://horntell.com"
