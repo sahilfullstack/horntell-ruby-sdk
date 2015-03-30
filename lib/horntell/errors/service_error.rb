@@ -1,4 +1,6 @@
 module Horntell
-	class ServiceError < Error
+	module Errors
+		class ServiceError < Error
+		end
 	end
 end

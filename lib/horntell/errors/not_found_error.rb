@@ -1,4 +1,6 @@
 module Horntell
-	class NotFoundError < InvalidRequestError
+	module Errors
+		class NotFoundError < InvalidRequestError
+		end
 	end
 end
