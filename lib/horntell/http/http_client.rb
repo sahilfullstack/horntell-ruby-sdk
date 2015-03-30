@@ -28,12 +28,8 @@ module Horntell
 				end
 			end
 		def handle_api_error(code, body)
-			begin
-				error_obj = JSON.parse(body)
-
-				error = error_obj["error"]
-			end
-
+			error_obj = JSON.parse(body)
+			error = error_obj["error"]
 
 			case code
 				when 400

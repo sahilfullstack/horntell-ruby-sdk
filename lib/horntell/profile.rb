@@ -2,18 +2,22 @@ module Horntell
 	class Profile
 		extend Horntell::Http::ApiRequester
 
+		#  find profile by its uid
 		def self.find(uid)
 			return raw_request('get', "/profiles/#{uid}")
 		end
 
+		
 		def self.create(profile)
 			return raw_request('post', "/profiles", profile)
 		end
 
+		#  updates a profile by its uid
 		def self.update(uid, profile)
 			return raw_request('put', "/profiles/#{uid}", profile)
 		end
 
+		# deletes a profile by its uid
 		def self.delete(uid)
 			return raw_request('delete', "/profiles/#{uid}")
 		end
