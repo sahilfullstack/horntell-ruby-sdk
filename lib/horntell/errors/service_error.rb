@@ -1,6 +1,4 @@
 module Horntell
-	module Ruby
-		class ServiceError < Error
-		end
+	class ServiceError < Error
 	end
 end

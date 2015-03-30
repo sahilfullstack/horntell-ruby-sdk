@@ -1,6 +1,4 @@
 module Horntell
-	module Ruby
-		class NotFoundError < InvalidRequestError
-		end
+	class NotFoundError < InvalidRequestError
 	end
 end

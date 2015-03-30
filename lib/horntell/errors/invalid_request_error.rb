@@ -1,6 +1,4 @@
 module Horntell
-	module Ruby
-		class InvalidRequestError < Error
-		end
+	class InvalidRequestError < Error
 	end
 end

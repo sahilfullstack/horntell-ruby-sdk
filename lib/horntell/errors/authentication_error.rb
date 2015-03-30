@@ -1,6 +1,4 @@
 module Horntell
-	module Ruby
-		class AuthenticationError < Error
-		end
+	class AuthenticationError < Error
 	end
 end
