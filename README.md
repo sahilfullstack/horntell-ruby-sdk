@@ -1,6 +1,15 @@
-# Horntell::Ruby
+Horntell SDK for Ruby
+====================
 
-TODO: Write a gem description
+This SDK allows you to easily integrate Horntell in your Ruby applications.
+
+## Requirements
+
+**Ruby 1.9.2 and later.**
+
+**Rest Client**
+
+This package depends on Rest client, which has the following additional requirements.
 
 ## Installation
 
@@ -18,14 +27,22 @@ Or install it yourself as:
 
     $ gem install horntell
 
-## Usage
+## Getting Started
 
-TODO: Write usage instructions here
+You need to `init`ialize the SDK with the app's key and secret, which you can find in your account at [http://app.horntell.com](http://app.horntell.com). Sample usage looks like this.
 
-## Contributing
+```ruby
+Horntell::init('YOUR_APP_KEY', 'YOUR_APP_SECRET');
+Horntell::Profile.create({
+	:uid => "47000",
+	:first_name => "gobar singh",
+	:last_name => "Doe",
+	:email => "john@example.com",
+	:signedup_at => "843478374"
+})
 
-1. Fork it ( https://github.com/[my-github-username]/horntell-ruby/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+```
+
+## Documentation
+
+Please see [http://docs.horntell.com/api](http://docs.horntell.com/api/?ruby) for up-to-date documentation.
