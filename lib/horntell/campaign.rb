@@ -1,6 +1,6 @@
 module Horntell
 	class Campaign
-		extend Horntell::Ruby::Http::ApiRequester
+		extend Horntell::Http::ApiRequester
 
 		def self.to_profile(uid, campaignId)
 			return raw_request('post', "/profiles/#{uid}/campaigns/#{campaignId}")

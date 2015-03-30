@@ -1,6 +1,6 @@
 module Horntell
 	class Profile
-		extend Horntell::Ruby::Http::ApiRequester
+		extend Horntell::Http::ApiRequester
 
 		def self.find(uid)
 			return raw_request('get', "/profiles/#{uid}")

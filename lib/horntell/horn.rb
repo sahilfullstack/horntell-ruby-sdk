@@ -1,6 +1,6 @@
 module Horntell
 	class Horn
-		extend Horntell::Ruby::Http::ApiRequester
+		extend Horntell::Http::ApiRequester
 
 		def self.to_profile(uid, horn)
 			return raw_request('post', "/profiles/#{uid}/horns", horn)
