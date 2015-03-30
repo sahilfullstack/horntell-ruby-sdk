@@ -4,28 +4,37 @@ Horntell SDK for Ruby
 This SDK allows you to easily integrate Horntell in your Ruby applications.
 
 ## Requirements
+**Ruby 1.9.2 and later.**
 
-* Ruby 1.9.2 and later.
-
-* Rest Client, json
-
-This package depends on Rest client, which has the following additional requirements.
+**Gems: rest-client, json**
 
 ## Installation
+You don't need this source code unless you want to modify the gem. If you just want to use the Horntell Ruby SDK, you should run:
 
-Add this line to your application's Gemfile:
+```
+gem install horntell
+```
+
+If you want to build the gem from source, run this:
+
+```
+gem build horntell.gemspec
+```
+
+## Bundler
+If you are installing via bundler, you should be sure to use the https rubygems source in your Gemfile, as any gems fetched over http could potentially be compromised in transit and alter the code of gems fetched securely over https:
 
 ```ruby
+source 'https://rubygems.org'
+
 gem 'horntell'
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install horntell
+```
+bundle install
+```
 
 ## Getting Started
 
@@ -34,11 +43,10 @@ You need to `init`ialize the SDK with the app's key and secret, which you can fi
 ```ruby
 Horntell::init('YOUR_APP_KEY', 'YOUR_APP_SECRET');
 Horntell::Profile.create({
-	:uid => "47000",
-	:first_name => "gobar singh",
+	:uid => "1337",
+	:first_name => "John",
 	:last_name => "Doe",
-	:email => "john@example.com",
-	:signedup_at => "843478374"
+	:signedup_at => 1383350400
 })
 
 ```
