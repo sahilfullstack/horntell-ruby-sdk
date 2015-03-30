@@ -22,8 +22,11 @@ require 'horntell/ruby/campaign.rb'
 
 module Horntell
 	module Ruby
+		@base_url = 'https://api.horntell.com'
+		@version = 'v1'
+
 		class << self
-			attr_accessor :api_key, :api_secret, :base_url
+			attr_accessor :api_key, :api_secret, :base_url, :version
 		end
 	end
 end
