@@ -25,5 +25,31 @@ module Horntell
 
 	class << self
 		attr_accessor :api_key, :api_secret, :base_url, :version
+
+		def init(key =  nil, secret = nil)
+			if key == nil
+				raise InvalidRequestError.new('Api\'s key is required', 400, 'invalid_request')
+			end
+
+			if secret == nil
+				raise InvalidRequestError.new('Api\'s secret is required', 400, 'invalid_request')
+			end
+
+			@api_key = key
+			@api_secret = secret
+		end
+		def set_base(base=nil)
+			@base_url = base
+		end		
+		def get_base()
+			return @base_url
+		end		
+		def get_key()
+			return @api_key
+		end		
+		def get_secret()
+			return @api_secret
+		end
+
 	end
 end
