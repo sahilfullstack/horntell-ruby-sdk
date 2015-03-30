@@ -5,9 +5,9 @@ This SDK allows you to easily integrate Horntell in your Ruby applications.
 
 ## Requirements
 
-**Ruby 1.9.2 and later.**
+*Ruby 1.9.2 and later.
 
-**Rest Client**
+*Rest Client, json
 
 This package depends on Rest client, which has the following additional requirements.
 
