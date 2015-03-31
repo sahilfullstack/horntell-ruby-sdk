@@ -14,6 +14,7 @@ require_relative 'horntell/http/response.rb'
 require_relative 'horntell/http/client.rb'
 require_relative 'horntell/http/request.rb'
 
+require_relative 'horntell/app.rb'
 require_relative 'horntell/profile.rb'
 require_relative 'horntell/horn.rb'
 require_relative 'horntell/campaign.rb'
@@ -24,30 +25,5 @@ module Horntell
 
 	class << self
 		attr_accessor :key, :secret, :base, :version
-
-		def init(key =  nil, secret = nil)
-			@key = key
-			@secret = secret
-		end
-
-		def set_base(base=nil)
-			@base = base
-		end
-
-		def get_base()
-			return @base
-		end
-
-		def get_key()
-			return @key
-		end
-
-		def get_secret()
-			return @secret
-		end
-
-		def set_version(version=nil)
-			@version = version
-		end
 	end
 end

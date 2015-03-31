@@ -7,7 +7,7 @@ module Horntell
 			return raw_request('get', "/profiles/#{uid}")
 		end
 
-		
+
 		def self.create(profile)
 			return raw_request('post', "/profiles", profile)
 		end
