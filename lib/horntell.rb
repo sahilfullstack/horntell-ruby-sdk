@@ -18,12 +18,3 @@ require_relative 'horntell/app.rb'
 require_relative 'horntell/profile.rb'
 require_relative 'horntell/horn.rb'
 require_relative 'horntell/campaign.rb'
-
-module Horntell
-	@base = 'https://api.horntell.com'
-	@version = 'v1'
-
-	class << self
-		attr_accessor :key, :secret, :base, :version
-	end
-end

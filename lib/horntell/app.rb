@@ -2,40 +2,50 @@ module Horntell
 
 	class App
 
+		@key = nil
+		@secret = nil
+
+		@base = 'https://api.horntell.com'
+		@version = 'v1'
+
+		class << self
+			attr_accessor :key, :secret, :base, :version
+		end
+
 		# initializes the key and secret of the app
 		def self.init(key =  nil, secret = nil)
-			Horntell.key = key
-			Horntell.secret = secret
+			@key = key
+			@secret = secret
 		end
 
 		# sets the base url of the app
-		def self.set_base(base=nil)
-			Horntell.base = base
+		def self.set_base(base = nil)
+			@base = base
 		end
 
 		# returns the base url of the app
 		def self.get_base()
-			return Horntell.base
+			return @base
 		end
 
 		# returns the key of the app
 		def self.get_key()
-			return Horntell.key
+			return @key
 		end
 
 		# returns the secret of the app
 		def self.get_secret()
-			return Horntell.secret
+			return @secret
 		end
 
 		# sets the version of the app
-		def self.set_version(version=nil)
-			Horntell.version = version
+		def self.set_version(version = nil)
+			@version = version
 		end
 
 		# gets the version of the app
 		def self.get_version()
-			return Horntell.version
+			return @version
 		end
 
 	end

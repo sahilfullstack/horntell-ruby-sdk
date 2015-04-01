@@ -4,10 +4,10 @@ module Horntell
 			include Horntell::Http::Client
 			def raw_request(method = nil, endpoint = nil, params = nil)
 
-				url = Horntell.base+endpoint
-				
+				url = Horntell::App.base+endpoint
+
 				headers = {
-					'Accept'=> "application/vnd.horntell.#{Horntell::version}+json",
+					'Accept'=> "application/vnd.horntell.#{Horntell::App.version}+json",
 					'Content-Type' => 'application/json'
 				}
 
@@ -18,8 +18,8 @@ module Horntell
 					url,
 					headers=headers,
 					params=params,
-					username=Horntell.key,
-					password=Horntell.secret)
+					username=Horntell::App.key,
+					password=Horntell::App.secret)
 				# return response.class
 				return Horntell::Http::Response.new(response)
 			end
