@@ -14,13 +14,13 @@ module Horntell
 
 		# initializes the key and secret of the app
 		def self.init(key =  nil, secret = nil)
-			@key = key
-			@secret = secret
+			@key = "#{key}"
+			@secret = "#{secret}"
 		end
 
 		# sets the base url of the app
 		def self.set_base(base = nil)
-			@base = base
+			@base = "#{base}"
 		end
 
 		# returns the base url of the app
@@ -40,7 +40,7 @@ module Horntell
 
 		# sets the version of the app
 		def self.set_version(version = nil)
-			@version = version
+			@version = "#{version}"
 		end
 
 		# gets the version of the app
@@ -51,7 +51,7 @@ module Horntell
 		#return hash hmac 256
 		def self.hash_hmac(uid)
 			sha256 = OpenSSL::Digest::SHA256.new
-			hash = OpenSSL::HMAC.hexdigest(sha256, "#{@secret}", "#{uid}")
+			hash = OpenSSL::HMAC.hexdigest(sha256, @secret, "#{uid}")
 
 			return hash
 		end
