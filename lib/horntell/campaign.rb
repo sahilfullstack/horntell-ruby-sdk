@@ -4,16 +4,16 @@ module Horntell
 
 		# triggers campaign for single profile
 		def self.to_profile(uid, campaignId, meta = nil)
-			meta = { :meta => meta }
+			datadata = { :meta => meta }
 
-			return raw_request('post', "/profiles/#{uid}/campaigns/#{campaignId}", meta)
+			return raw_request('post', "/profiles/#{uid}/campaigns/#{campaignId}", data)
 		end
 
 		#triggers campaign for multiple profile
 		def self.to_profiles(profiles, campaignId, meta = nil)
-			profiles = { :profile_uids => profiles, :meta => meta }
+			data = { :profile_uids => profiles, :meta => meta }
 
-			return raw_request('post', "/profiles/campaigns/#{campaignId}", profiles)
+			return raw_request('post', "/profiles/campaigns/#{campaignId}", data)
 		end
 	end
 end
