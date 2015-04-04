@@ -4,7 +4,7 @@ module Horntell
 
 		# triggers campaign for single profile
 		def self.to_profile(uid, campaignId, meta = nil)
-			datadata = { :meta => meta }
+			data = { :meta => meta }
 
 			return raw_request('post', "/profiles/#{uid}/campaigns/#{campaignId}", data)
 		end
