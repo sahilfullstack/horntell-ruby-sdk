@@ -6,6 +6,8 @@ This SDK allows you to easily integrate Horntell in your Ruby applications.
 ## Requirements
 **Ruby 1.9.2 and later.**
 
+**`openssl` compiled with your Ruby installation**
+
 **Gems: rest-client, json**
 
 ## Installation
