@@ -31,7 +31,7 @@ module Horntell
 			def handle_api_error(code, body)
 				error_obj = JSON.parse(body)
 				error = error_obj["error"]
-
+				
 				case code
 				when 400
 					raise invalid_request_error error, code

@@ -1,6 +1,9 @@
 require 'json'
 require 'rest_client'
 require 'openssl'
+require 'cgi'
+require 'net/http'
+
 
 require_relative "horntell/version.rb"
 require_relative 'horntell/errors/error.rb'
@@ -19,3 +22,5 @@ require_relative 'horntell/app.rb'
 require_relative 'horntell/profile.rb'
 require_relative 'horntell/horn.rb'
 require_relative 'horntell/campaign.rb'
+require_relative 'horntell/card.rb'
+require_relative 'horntell/event.rb'

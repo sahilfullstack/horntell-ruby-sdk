@@ -14,3 +14,10 @@
 mkmf.log
 .sketches
 /horntell-*.gem
+Vagrantfile
+savestate
+.Vagrantfile.swp
+.vagrant
+webhook.rb
+test.rb
+text.txt
