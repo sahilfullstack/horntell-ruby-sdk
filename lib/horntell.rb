@@ -2,8 +2,6 @@ require 'json'
 require 'rest_client'
 require 'openssl'
 require 'cgi'
-require 'net/http'
-
 
 require_relative "horntell/version.rb"
 require_relative 'horntell/errors/error.rb'
