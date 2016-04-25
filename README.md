@@ -43,7 +43,7 @@ bundle install
 You need to `init`ialize the SDK with the app's key and secret, which you can find in your account at [http://app.horntell.com](http://app.horntell.com). Sample usage looks like this.
 
 ```ruby
-Horntell::init('YOUR_APP_KEY', 'YOUR_APP_SECRET');
+Horntell::App.init('YOUR_APP_KEY', 'YOUR_APP_SECRET');
 Horntell::Profile.create({
 	:uid => "1337",
 	:first_name => "John",
