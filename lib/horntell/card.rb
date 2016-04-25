@@ -15,7 +15,7 @@ module Horntell
 			return raw_request('post', "/profiles/#{uid}/cards", card)
 		end
 
-		#sends a card to multiple profiles
+		# sends a card to multiple profiles
 		def self.to_profiles(profiles, card)
 			card[:profile_uids] = profiles
 			card[:canvas] =	card[:canvas] ? card[:canvas] : @default
@@ -29,7 +29,7 @@ module Horntell
 			return raw_request('post', "/channels/#{uid}/cards", card)
 		end
 
-		#sends a card to multiple channels
+		# sends a card to multiple channels
 		def self.to_channels(channels, card)
 			card[:channel_uids] = channels
 			card[:canvas] =	card[:canvas] ? card[:canvas] : @default

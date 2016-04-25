@@ -9,7 +9,7 @@ module Horntell
 			return raw_request('post', "/profiles/#{uid}/campaigns/#{campaignId}", data)
 		end
 
-		#triggers campaign for multiple profile
+		# triggers campaign for multiple profile
 		def self.to_profiles(profiles, campaignId, meta = nil)
 			data = { :profile_uids => profiles, :meta => meta }
 
@@ -23,7 +23,7 @@ module Horntell
 			return raw_request('post', "/channels/#{uid}/campaigns/#{campaignId}", data)
 		end
 
-		#triggers campaign for multiple profile
+		# triggers campaign for multiple profile
 		def self.to_channels(channels, campaignId, meta = nil)
 			data = { :channel_uids => channels, :meta => meta }
 

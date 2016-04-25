@@ -48,7 +48,7 @@ module Horntell
 			return @version
 		end
 
-		#return hash hmac 256
+		# return hash hmac 256
 		def self.hash(uid)
 			sha256 = OpenSSL::Digest::SHA256.new
 			hash = OpenSSL::HMAC.hexdigest(sha256, @secret, "#{uid}")

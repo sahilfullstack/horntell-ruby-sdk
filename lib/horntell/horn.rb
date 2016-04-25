@@ -7,7 +7,7 @@ module Horntell
 			return raw_request('post', "/profiles/#{uid}/horns", horn)
 		end
 
-		#sends a horn to multiple profiles
+		# sends a horn to multiple profiles
 		def self.to_profiles(profiles, horn)
 			horn[:profile_uids] = profiles
 
